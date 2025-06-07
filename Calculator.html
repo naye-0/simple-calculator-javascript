@@ -1,0 +1,149 @@
+<!-- Create a simple Program to build the Calculator in JavaScript using with HTML and CSS web languages. -->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title> JavaScript Calculator </title>
+
+<style>
+body {
+    background: #e5e5e5;
+    font-family: 'San Francisco', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 23px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.formstyle {
+    width: 340px;
+    height: 600px;
+    margin: 40px auto;
+    border-radius: 40px;
+    background: #222;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calc {
+    width: 89%;
+    height: 60px;
+    border: none;
+    border-radius: 18px;
+    padding: 0 20px;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    background: #181818;
+    color: #fff;
+    text-align: right;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+input[type="button"] {
+    width: 60px;
+    height: 60px;
+    margin: 7px;
+    border: none;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    font-size: 1.7em;
+    font-weight: 400;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+input[type="button"]:active {
+    background: #444;
+}
+
+input[type="button"][value="0"] {
+    width: 132px;
+    border-radius: 30px;
+    text-align: left;
+    padding-left: 28px;
+}
+
+input[type="button"][value="+"],
+input[type="button"][value="-"],
+input[type="button"][value="*"],
+input[type="button"][value="/"] {
+    background: #ff9500;
+    color: #fff;
+}
+
+input[type="button"][value="="] {
+    background: #34c759;
+    color: #fff;
+}
+
+#clear {
+    width: 95%;
+    border-radius: 30px;
+    padding: 0;
+    height: 50px;
+    background: #a5a5a5;
+    color: #222;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+input[type="button"][value="."] {
+    background: #333;
+    color: #fff;
+}
+</style>
+
+</head>
+<body>
+<h1> Calculator Program in JavaScript </h1>
+<div class= "formstyle">
+<form name = "form1">
+	
+	<!-- This input box shows the button pressed by the user in calculator. -->
+  <input id = "calc" type ="text" name = "answer"> <br> <br>
+  <!-- Display the calculator button on the screen. -->
+  <!-- onclick() function display the number prsses by the user. -->
+  <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">
+  <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">
+  <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">
+   <input type = "button" value = "+" onclick = "form1.answer.value += '+' ">
+  <br> <br>
+  
+  <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">
+  <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">
+  <input type = "button" value = "6" onclick = "form1.answer.value += '6' ">
+  <input type = "button" value = "-" onclick = "form1.answer.value += '-' ">
+  <br> <br>
+  
+  <input type = "button" value = "7" onclick = "form1.answer.value += '7' ">
+  <input type = "button" value = "8" onclick = "form1.answer.value += '8' ">
+  <input type = "button" value = "9" onclick = "form1.answer.value += '9' ">
+  <input type = "button" value = "*" onclick = "form1.answer.value += '*' ">
+  <br> <br>
+  
+  <input type = "button" value = "/" onclick = "form1.answer.value += '/' ">
+  <input type = "button" value = "0" onclick = "form1.answer.value += '0' ">
+  <input type = "button" value = "." onclick = "form1.answer.value += '.' ">
+	<!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+  <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">
+  <br> 
+  <!-- Display the Cancel button and erase all data entered by the user. -->
+  <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >
+  <br> 
+  
+</form>
+</div>
+</body>
+</html>
